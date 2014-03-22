@@ -1,0 +1,47 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://donnees.ville.qc.ca/evenement"
+            xmlns:xs="http://donnees.ville.qc.ca/evenement">
+
+<xsd:element name="EVTS" type="xs:EVTSType"/>
+
+<xsd:complexType name="EVTSType">
+  <xsd:sequence>
+    <xsd:element name="EVT" 
+                type="xs:EVTType" 
+                minOccurs="0" 
+                maxOccurs="unbounded"/>
+    </xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="EVTType">
+    <xsd:sequence>
+            <xsd:element name="MUNID" type = "xsd:integer" minOccurs ="1" maxOccurs ="1" />	
+           <xsd:element name="CODEID" type = "xsd:string" minOccurs ="1" maxOccurs ="1" />
+           <xsd:element name="DT01" type = "xsd:date" minOccurs ="1" maxOccurs ="1" />
+           <xsd:element name="DT02" type = "xsd:date" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="HR01" type = "xsd:time" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="HR02" type = "xsd:time" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="HOR" type = "xsd:string" minOccurs ="0" maxOccurs ="unbounded" />
+           <xsd:element name="TITRE" type = "xsd:string" minOccurs ="1" maxOccurs ="1" />
+           <xsd:element name="LOC" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="AD" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="AD_NO" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="AD_GEN" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="AD_LIEN" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="AD_SPECI" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="AD_DIREC" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="AD_MUN" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="AD_MUNID" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="TEL1" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="TEL2" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="CONTACT" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="GEOM" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="DESCRIP" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="CO" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="URL" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="INFO" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="URL_PHOTO" type = "xsd:string" minOccurs ="0" maxOccurs ="1" />
+           <xsd:element name="CATEG" type = "xsd:string" minOccurs ="0" maxOccurs ="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
